@@ -1,0 +1,124 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HTML
+===================================================== */
+
+html {
+    width: 100%;
+    min-height: 100%;
+
+    scroll-behavior: smooth;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background-color: #f5f7fb;
+
+    color: #202124;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =====================================================
+   ROOT DO REACT
+===================================================== */
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   ELEMENTOS DE FORMULÁRIO
+===================================================== */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+button {
+    outline: none;
+}
+
+
+/* =====================================================
+   FOCUS
+===================================================== */
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, 0.25);
+
+    outline-offset: 2px;
+}
+
+
+/* =====================================================
+   SELEÇÃO DE TEXTO
+===================================================== */
+
+::selection {
+    background: #6d5ce7;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f1f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c5c7d0;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a9acb7;
+}

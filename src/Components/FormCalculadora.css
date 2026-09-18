@@ -1,0 +1,612 @@
+/* =====================================================
+   CONTAINER PRINCIPAL
+===================================================== */
+
+.form-calculadora {
+    width: 100%;
+
+    padding: 38px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 60px rgba(38, 42, 68, 0.12),
+        0 8px 25px rgba(38, 42, 68, 0.07);
+
+    animation: entradaCalculadora 0.5s ease;
+}
+
+
+/* =====================================================
+   TÍTULO DO FORMULÁRIO
+===================================================== */
+
+.titulo-formulario {
+    margin-bottom: 30px;
+}
+
+.titulo-formulario h2 {
+    margin: 0 0 7px;
+
+    color: #252733;
+
+    font-size: 25px;
+    font-weight: 750;
+
+    letter-spacing: -0.4px;
+}
+
+.titulo-formulario p {
+    margin: 0;
+
+    color: #858996;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   CAMPOS
+===================================================== */
+
+.campo {
+    width: 100%;
+
+    margin-bottom: 21px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #3e414d;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   CONTAINER DOS INPUTS
+===================================================== */
+
+.input-container {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 54px;
+
+    background: #f7f8fc;
+
+    border: 2px solid #e7e8ee;
+
+    border-radius: 13px;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.input-container:hover {
+    background: #ffffff;
+
+    border-color: #d4d6df;
+}
+
+.input-container:focus-within {
+    background: #ffffff;
+
+    border-color: #6d5ce7;
+
+    box-shadow:
+        0 0 0 4px rgba(109, 92, 231, 0.11);
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   ÍCONE DOS INPUTS
+===================================================== */
+
+.input-icone {
+    width: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #6d5ce7;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    border-right: 1px solid #e5e6ec;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.input-container input {
+    width: 100%;
+    height: 100%;
+
+    padding: 0 15px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #292b35;
+
+    font-size: 15px;
+
+    box-sizing: border-box;
+}
+
+.input-container input::placeholder {
+    color: #a4a7b2;
+}
+
+.input-container input::-webkit-inner-spin-button,
+.input-container input::-webkit-outer-spin-button {
+    margin: 0;
+}
+
+
+/* =====================================================
+   SELECT
+===================================================== */
+
+.input-container select {
+    width: 100%;
+    height: 100%;
+
+    padding: 0 15px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #292b35;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+.input-container select option {
+    color: #292b35;
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   ÁREA DOS BOTÕES
+===================================================== */
+
+.botoes {
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 12px;
+
+    width: 100%;
+
+    margin-top: 29px;
+}
+
+
+/* =====================================================
+   CONFIGURAÇÃO GERAL DOS BOTÕES
+===================================================== */
+
+.botoes button {
+    position: relative;
+
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border-radius: 13px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* =====================================================
+   ÍCONE DOS BOTÕES
+===================================================== */
+
+.icone-botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   BOTÃO CALCULAR
+===================================================== */
+
+.btn-calcular {
+    border: none;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #6757e8 0%,
+        #7d52dc 100%
+    );
+
+    box-shadow:
+        0 9px 20px rgba(103, 87, 232, 0.25);
+}
+
+
+/* Brilho passando pelo botão */
+
+.btn-calcular::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.55s ease;
+}
+
+.btn-calcular:hover::before {
+    left: 140%;
+}
+
+
+/* Hover */
+
+.btn-calcular:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 13px 28px rgba(103, 87, 232, 0.32);
+}
+
+
+/* Clique */
+
+.btn-calcular:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 5px 12px rgba(103, 87, 232, 0.22);
+}
+
+
+/* =====================================================
+   BOTÃO LIMPAR
+===================================================== */
+
+.btn-limpar {
+    border: 2px solid #e4e5eb;
+
+    color: #555865;
+
+    background: #f8f8fa;
+
+    box-shadow:
+        0 5px 13px rgba(40, 43, 60, 0.05);
+}
+
+.btn-limpar:hover {
+    background: #f0f0f4;
+
+    border-color: #d8d9e1;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 20px rgba(40, 43, 60, 0.09);
+}
+
+.btn-limpar:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   ÁREA DO RESULTADO
+===================================================== */
+
+.resultado {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 21px;
+
+    box-sizing: border-box;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6f4ff,
+            #faf9ff
+        );
+
+    border: 1px solid #e4dfff;
+
+    animation: resultadoEntrada 0.35s ease;
+}
+
+
+/* =====================================================
+   CABEÇALHO DO RESULTADO
+===================================================== */
+
+.resultado-topo {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 12px;
+
+    color: #5c4bc8;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.6px;
+}
+
+
+/* =====================================================
+   ÍCONE DO RESULTADO
+===================================================== */
+
+.resultado-icone {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #6d5ce7;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   VALOR DO RESULTADO
+===================================================== */
+
+.resultado-valor {
+    margin-bottom: 8px;
+
+    color: #30266d;
+
+    font-size: 38px;
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    word-break: break-word;
+}
+
+
+/* =====================================================
+   OPERAÇÃO REALIZADA
+===================================================== */
+
+.operacao-realizada {
+    color: #8b8999;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   RESULTADO COM ERRO
+===================================================== */
+
+.resultado.erro {
+    background:
+        linear-gradient(
+            135deg,
+            #fff5f5,
+            #fff9f9
+        );
+
+    border-color: #f2d5d5;
+}
+
+.resultado.erro .resultado-topo {
+    color: #c74444;
+}
+
+.resultado.erro .resultado-icone {
+    background: #e05252;
+}
+
+.mensagem-erro {
+    margin: 0;
+
+    color: #8e4141;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
+
+@keyframes entradaCalculadora {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes resultadoEntrada {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(8px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .form-calculadora {
+        padding: 28px 22px;
+
+        border-radius: 20px;
+    }
+
+    .titulo-formulario h2 {
+        font-size: 22px;
+    }
+
+    .titulo-formulario p {
+        font-size: 13px;
+    }
+
+    .botoes {
+        grid-template-columns: 1fr;
+    }
+
+    .resultado-valor {
+        font-size: 32px;
+    }
+}
+
+
+/* =====================================================
+   CELULARES MUITO PEQUENOS
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .form-calculadora {
+        padding: 24px 17px;
+    }
+
+    .input-icone {
+        width: 38px;
+    }
+
+    .input-container input,
+    .input-container select {
+        padding: 0 10px;
+
+        font-size: 14px;
+    }
+
+    .botoes button {
+        height: 52px;
+    }
+}

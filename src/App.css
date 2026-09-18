@@ -1,0 +1,215 @@
+/* ==========================================
+   CONFIGURAÇÃO PRINCIPAL DA APLICAÇÃO
+========================================== */
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(99, 102, 241, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(139, 92, 246, 0.15),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f5f7ff 0%,
+            #eef1f8 50%,
+            #f8f9fc 100%
+        );
+}
+
+
+/* ==========================================
+   CONTAINER PRINCIPAL
+========================================== */
+
+.calculadora-container {
+    width: 100%;
+    max-width: 560px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.cabecalho-app {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   ÍCONE DO CABEÇALHO
+========================================== */
+
+.icone-calculadora {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px rgba(99, 102, 241, 0.25);
+
+    transform: rotate(-5deg);
+}
+
+
+/* ==========================================
+   TÍTULO
+========================================== */
+
+.cabecalho-app h1 {
+    margin: 0 0 5px;
+
+    color: #202124;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* ==========================================
+   DESCRIÇÃO
+========================================== */
+
+.cabecalho-app p {
+    margin: 0;
+
+    color: #777b88;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+.rodape-app {
+    width: 100%;
+
+    margin-top: 22px;
+
+    text-align: center;
+}
+
+.rodape-app p {
+    margin: 0;
+
+    color: #9296a3;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 650px) {
+
+    .app {
+        padding: 30px 15px;
+    }
+
+    .calculadora-container {
+        padding: 20px 5px;
+    }
+
+    .cabecalho-app {
+        padding: 0 5px;
+    }
+
+    .cabecalho-app h1 {
+        font-size: 25px;
+    }
+
+    .cabecalho-app p {
+        font-size: 13px;
+    }
+
+    .icone-calculadora {
+        width: 50px;
+        height: 50px;
+
+        font-size: 27px;
+    }
+}
+
+
+/* ==========================================
+   CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 400px) {
+
+    .cabecalho-app {
+        align-items: flex-start;
+    }
+
+    .cabecalho-app h1 {
+        font-size: 22px;
+    }
+
+    .cabecalho-app p {
+        font-size: 12px;
+    }
+
+    .icone-calculadora {
+        width: 45px;
+        height: 45px;
+
+        font-size: 24px;
+    }
+}
