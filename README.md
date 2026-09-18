@@ -421,7 +421,7 @@ index.css
 
 Contém os estilos globais utilizados pela aplicação.
 
-# 🔄 Funcionamento do Sistema
+Funcionamento do Sistema
 
 O funcionamento da calculadora pode ser resumido da seguinte forma:
 Usuário digita o primeiro número
